@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="App.axaml" value="Tg_bot_GUI.csproj" />
+        <entry key="MainView.axaml" value="Tg_bot_GUI.csproj" />
+        <entry key="MainWindow.axaml" value="Tg_bot_GUI.csproj" />
+        <entry key="ResultView.axaml" value="Tg_bot_GUI.csproj" />
+        <entry key="ResultWindow.axaml" value="Tg_bot_GUI.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
