@@ -1,0 +1,28 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:Tg_bot_GUI.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Tg_bot_GUI.Views.ChatView"
+             x:DataType="vm:ChatViewModel">
+    <Grid>
+        <!-- Список элементов слева -->
+        <ListBox x:Name="itemListBox" Margin="10" ItemsSource="{Binding Source}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <!-- <CheckBox IsChecked="{Binding isChecked}" VerticalAlignment="Center"/> -->
+                        <TextBlock Text="{Binding  ChatName}" VerticalAlignment="Center" Margin="5"/>
+                        <Button Content="Delete" Command="{Binding Path = (vm:ChatViewModel).DeleteChat}" CommandParameter="{Binding}" Margin="5"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        
+        <StackPanel Margin="10" HorizontalAlignment="Right">
+            <TextBox x:Name="inputChatBox" Text="{Binding Text}" Margin="0,0,0,10"/>
+            <Button Content="Add" Command="{Binding AddNewChat }" CommandParameter="{Binding}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:reactiveUi="http://reactiveui.net"
+        xmlns:tgBotGui="clr-namespace:Tg_bot_GUI"
+        xmlns:viewModels="clr-namespace:Tg_bot_GUI.ViewModels"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Tg_bot_GUI.MainWindow"
+        Title="Tg_bot_GUI"
+        x:DataType="viewModels:MainWindowViewModel">
+        
+        <Grid RowDefinitions="*,Auto">
+                <reactiveUi:RoutedViewHost Grid.Row="0" Router="{Binding Router}">
+                        <reactiveUi:RoutedViewHost.DefaultContent>
+                                <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                                        <TextBlock Text = "Enter your bot token" HorizontalAlignment="Center" 
+                                                   FontFamily="{StaticResource Tech}" FontSize="18"/>
+                                        <Grid ColumnDefinitions="*,6*,*">
+                                                <TextBox Grid.Column="1" Name="InputTextBox" Margin = "15" CornerRadius="45" Height="50" 
+                                                         HorizontalAlignment="Stretch" FontFamily="{StaticResource Tech}" FontSize="18"
+                                                         VerticalContentAlignment="Center"/>
+                                        </Grid>
+                                        <Button HorizontalAlignment="Center" Content="Submit" Background="#3498db" Foreground="White"
+                                                Padding="20" CornerRadius="45" FontFamily="{StaticResource Tech}"
+                                                Command="{Binding GoNext }" FontSize="20"/>
+                                </StackPanel>
+                        </reactiveUi:RoutedViewHost.DefaultContent>
+                        <reactiveUi:RoutedViewHost.ViewLocator>
+                                <!-- See AppViewLocator.cs section below -->
+                                <tgBotGui:AppViewLocator />
+                        </reactiveUi:RoutedViewHost.ViewLocator>
+                </reactiveUi:RoutedViewHost>
+                <!-- <Button Grid.Row="1" Command="{Binding GoNext }">Go next View</Button> -->
+        </Grid>
+</Window>

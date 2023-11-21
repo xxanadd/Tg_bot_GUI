@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\stepa\\RiderProjects\\Tg_bot_GUI\\Tg_bot_GUI.csproj": {}
+    "C:\\Users\\Stepan\\RiderProjects\\Tg_bot_GUI\\Tg_bot_GUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\stepa\\RiderProjects\\Tg_bot_GUI\\Tg_bot_GUI.csproj": {
+    "C:\\Users\\Stepan\\RiderProjects\\Tg_bot_GUI\\Tg_bot_GUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\stepa\\RiderProjects\\Tg_bot_GUI\\Tg_bot_GUI.csproj",
+        "projectUniqueName": "C:\\Users\\Stepan\\RiderProjects\\Tg_bot_GUI\\Tg_bot_GUI.csproj",
         "projectName": "Tg_bot_GUI",
-        "projectPath": "C:\\Users\\stepa\\RiderProjects\\Tg_bot_GUI\\Tg_bot_GUI.csproj",
-        "packagesPath": "C:\\Users\\stepa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\stepa\\RiderProjects\\Tg_bot_GUI\\obj\\",
+        "projectPath": "C:\\Users\\Stepan\\RiderProjects\\Tg_bot_GUI\\Tg_bot_GUI.csproj",
+        "packagesPath": "C:\\Users\\Stepan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Stepan\\RiderProjects\\Tg_bot_GUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\stepa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Stepan\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -32,9 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "default"
         }
       },
       "frameworks": {
@@ -57,9 +54,17 @@
               "target": "Package",
               "version": "[11.0.5, )"
             },
+            "Avalonia.ReactiveUI": {
+              "target": "Package",
+              "version": "[11.0.5, )"
+            },
             "Avalonia.Themes.Fluent": {
               "target": "Package",
               "version": "[11.0.5, )"
+            },
+            "ReactiveUI": {
+              "target": "Package",
+              "version": "[19.5.1, )"
             }
           },
           "imports": [
@@ -76,19 +81,19 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.9, 7.0.9]"
+              "version": "[7.0.14, 7.0.14]"
             },
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[7.0.9, 7.0.9]"
+              "version": "[7.0.14, 7.0.14]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.9, 7.0.9]"
+              "version": "[7.0.14, 7.0.14]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.9, 7.0.9]"
+              "version": "[7.0.14, 7.0.14]"
             }
           ],
           "frameworkReferences": {
@@ -96,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.7.23376.3\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
