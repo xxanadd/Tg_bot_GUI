@@ -6,26 +6,57 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Tg_bot_GUI.Views.ChatView"
              x:DataType="vm:ChatViewModel">
-    <Grid>
-        <Button
-            Command="{Binding RemoveSelectedChats}"> aa </Button>
-        <!-- Список элементов слева -->
-        <ListBox Margin="10" ItemsSource="{Binding Source}" SelectionMode="Multiple">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal" Margin="5">
-                        <CheckBox IsChecked="{Binding isChecked}" VerticalAlignment="Center"/>
-                        <TextBlock Text="{Binding ChatName}" VerticalAlignment="Center" Margin="5"/>
-                        <Button CommandParameter = "{Binding}" Command="{Binding $parent[ListBox].((vm:ChatViewModel)DataContext).RemoveSelectedChats}" Content="Delete"></Button>
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-        
-        <StackPanel Margin="10" HorizontalAlignment="Right">
-            <TextBox x:Name="InputChatBox" Text="{Binding Text}" Margin="0,0,0,10"/>
-            <Button Content="Add" Command="{Binding AddNewChat }" CommandParameter="{Binding}"/>
-            <Button Content="Back" Command="{Binding GoBack}"></Button>
+    <Grid ColumnDefinitions="*,*">
+        <DockPanel Grid.Column="0">
+            <Button DockPanel.Dock="Top" Content="Log out" Command="{Binding GoBack}"
+                    Background="Gray" Foreground="White"
+                    Width="100" Height = "40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+                    Margin = "20, 10" CornerRadius="20" FontFamily="{StaticResource Tech}" 
+                    HorizontalAlignment="Left" FontSize="20"/>
+            <!-- Список элементов слева -->
+            <ListBox DockPanel.Dock="Bottom" Margin="20, 0" ItemsSource="{Binding Source}" 
+                     Background="Transparent" SelectionMode="Toggle">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="LightGray" BorderThickness="2" Background="White" 
+                                Margin="0,0,0,5" CornerRadius="20">
+                            <!-- Внутренний StackPanel для размещения элементов внутри ячейки -->
+                            <DockPanel HorizontalAlignment="Stretch" Margin="5">
+                                <Grid ColumnDefinitions="Auto, *, Auto">
+                                    <CheckBox Grid.Column="0" IsChecked="{Binding isChecked}" VerticalAlignment="Center"
+                                              HorizontalAlignment="Left" Margin="10"/>
+                                    <TextBlock Grid.Column="1" Text="{Binding ChatName}" HorizontalAlignment="Center" 
+                                               VerticalAlignment="Center" Margin="10" 
+                                               FontFamily="{StaticResource Tech}" FontSize="14"/>
+                                    <Button Grid.Column="2" CommandParameter="{Binding}" 
+                                            Command="{Binding $parent[ListBox].((vm:ChatViewModel)DataContext).RemoveSelectedChats}"
+                                            Background="Transparent" Padding="0" HorizontalAlignment="Right"
+                                            Margin="10">
+                                        <Image Source="../Assets/delete_cross.png" Height="20" Width="20"/>
+                                    </Button>
+                                </Grid>
+                            </DockPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </DockPanel>
+        <StackPanel Grid.Column="1" Margin="10" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+            <TextBlock Text = "Add chat" HorizontalAlignment="Center" 
+                       FontFamily="{StaticResource Tech}" FontSize="18" Margin = "10"/>
+            <TextBox x:Name="InputChatBox" Text="{Binding Text}" Margin = "10" CornerRadius="20" Height="50" 
+                     HorizontalAlignment="Stretch" FontFamily="{StaticResource Tech}" FontSize="18"
+                     VerticalContentAlignment="Center"/>
+            <Button Content="Add" Command="{Binding AddNewChat }" 
+                    CommandParameter="{Binding}" Background="#000000" Foreground="White"
+                    Width="180" Height = "60" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+                    Margin = "10" CornerRadius="20" FontFamily="{StaticResource Tech}" 
+                    HorizontalAlignment="Center" FontSize="20"/>
+            <Button Content="Send message" Command="{Binding AddNewChat }" 
+                    CommandParameter="{Binding}" Background="#3498db" Foreground="White"
+                    Width="180" Height = "60" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+                    Margin = "10" CornerRadius="20" FontFamily="{StaticResource Tech}" 
+                    HorizontalAlignment="Center" FontSize="20"/>
         </StackPanel>
     </Grid>
 </UserControl>
