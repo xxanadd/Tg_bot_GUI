@@ -6,6 +6,7 @@ public class Chat
 {
     public String ChatName { get; set; }
     public String chatId;
+    public Boolean isChecked { get; set; }
 
     public Chat(String chatName)
     {
@@ -21,7 +22,7 @@ public class Chat
         }
 
         Chat otherChat = (Chat)obj;
-        return this.ChatName == otherChat.ChatName;
+        return ChatName == otherChat.ChatName;
     }
 
     public override int GetHashCode()

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Stepan\\RiderProjects\\Tg_bot_GUI\\Tg_bot_GUI.csproj": {}
+    "C:\\Users\\stepa\\RiderProjects\\Tg_bot_GUI\\Tg_bot_GUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Stepan\\RiderProjects\\Tg_bot_GUI\\Tg_bot_GUI.csproj": {
+    "C:\\Users\\stepa\\RiderProjects\\Tg_bot_GUI\\Tg_bot_GUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Stepan\\RiderProjects\\Tg_bot_GUI\\Tg_bot_GUI.csproj",
+        "projectUniqueName": "C:\\Users\\stepa\\RiderProjects\\Tg_bot_GUI\\Tg_bot_GUI.csproj",
         "projectName": "Tg_bot_GUI",
-        "projectPath": "C:\\Users\\Stepan\\RiderProjects\\Tg_bot_GUI\\Tg_bot_GUI.csproj",
-        "packagesPath": "C:\\Users\\Stepan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Stepan\\RiderProjects\\Tg_bot_GUI\\obj\\",
+        "projectPath": "C:\\Users\\stepa\\RiderProjects\\Tg_bot_GUI\\Tg_bot_GUI.csproj",
+        "packagesPath": "C:\\Users\\stepa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\stepa\\RiderProjects\\Tg_bot_GUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Stepan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\stepa\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -32,6 +32,9 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "default"
         }
       },
       "frameworks": {
@@ -65,6 +68,10 @@
             "ReactiveUI": {
               "target": "Package",
               "version": "[19.5.1, )"
+            },
+            "Telegram.Bot": {
+              "target": "Package",
+              "version": "[19.0.0, )"
             }
           },
           "imports": [
@@ -81,19 +88,19 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.14, 7.0.14]"
+              "version": "[7.0.9, 7.0.9]"
             },
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[7.0.14, 7.0.14]"
+              "version": "[7.0.9, 7.0.9]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.14, 7.0.14]"
+              "version": "[7.0.9, 7.0.9]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.14, 7.0.14]"
+              "version": "[7.0.9, 7.0.9]"
             }
           ],
           "frameworkReferences": {
@@ -101,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.7.23376.3\\RuntimeIdentifierGraph.json"
         }
       }
     }

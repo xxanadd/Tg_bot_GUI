@@ -266,3 +266,11 @@ C:\Users\Stepan\RiderProjects\Tg_bot_GUI\bin\Debug\net7.0\DynamicData.dll
 C:\Users\Stepan\RiderProjects\Tg_bot_GUI\bin\Debug\net7.0\ReactiveUI.dll
 C:\Users\Stepan\RiderProjects\Tg_bot_GUI\bin\Debug\net7.0\Splat.dll
 C:\Users\Stepan\RiderProjects\Tg_bot_GUI\bin\Debug\net7.0\System.Reactive.dll
+C:\Users\stepa\RiderProjects\Tg_bot_GUI\obj\Debug\net7.0\Tg_bot_GUI.sourcelink.json
+C:\Users\stepa\RiderProjects\Tg_bot_GUI\bin\Debug\net7.0\Avalonia.ReactiveUI.dll
+C:\Users\stepa\RiderProjects\Tg_bot_GUI\bin\Debug\net7.0\DynamicData.dll
+C:\Users\stepa\RiderProjects\Tg_bot_GUI\bin\Debug\net7.0\ReactiveUI.dll
+C:\Users\stepa\RiderProjects\Tg_bot_GUI\bin\Debug\net7.0\Splat.dll
+C:\Users\stepa\RiderProjects\Tg_bot_GUI\bin\Debug\net7.0\System.Reactive.dll
+C:\Users\stepa\RiderProjects\Tg_bot_GUI\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\stepa\RiderProjects\Tg_bot_GUI\bin\Debug\net7.0\Telegram.Bot.dll

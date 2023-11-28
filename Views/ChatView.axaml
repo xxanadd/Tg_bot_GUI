@@ -7,14 +7,16 @@
              x:Class="Tg_bot_GUI.Views.ChatView"
              x:DataType="vm:ChatViewModel">
     <Grid>
+        <Button
+            Command="{Binding RemoveSelectedChats}"> aa </Button>
         <!-- Список элементов слева -->
-        <ListBox Name="listBox" Margin="10" ItemsSource="{Binding Source}" SelectionMode="Multiple">
+        <ListBox Margin="10" ItemsSource="{Binding Source}" SelectionMode="Multiple">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal" Margin="5">
-                        <!-- <CheckBox IsChecked="{Binding isChecked}" VerticalAlignment="Center"/> -->
-                        <TextBlock Text="{Binding  ChatName}" VerticalAlignment="Center" Margin="5"/>
-                        <!-- <Button Content="Delete" Command="{Binding}" CommandParameter="{Binding }" Margin="5"/> -->
+                        <CheckBox IsChecked="{Binding isChecked}" VerticalAlignment="Center"/>
+                        <TextBlock Text="{Binding ChatName}" VerticalAlignment="Center" Margin="5"/>
+                        <Button CommandParameter = "{Binding}" Command="{Binding $parent[ListBox].((vm:ChatViewModel)DataContext).RemoveSelectedChats}" Content="Delete"></Button>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -23,7 +25,7 @@
         <StackPanel Margin="10" HorizontalAlignment="Right">
             <TextBox x:Name="InputChatBox" Text="{Binding Text}" Margin="0,0,0,10"/>
             <Button Content="Add" Command="{Binding AddNewChat }" CommandParameter="{Binding}"/>
-            <Button x:Name="RemoveButton" Content="Remove Selected" Command="{Binding RemoveSelectedChatsCommand}" />
+            <Button Content="Back" Command="{Binding GoBack}"></Button>
         </StackPanel>
     </Grid>
 </UserControl>
