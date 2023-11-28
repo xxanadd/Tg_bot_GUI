@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Reactive;
+using Avalonia.Controls;
 using DynamicData.Binding;
 using ReactiveUI;
 using Tg_bot_GUI.Models;
@@ -43,12 +45,16 @@ public class ChatViewModel: ReactiveObject, IRoutableViewModel
         _text = "";
         this.RaisePropertyChanged(nameof(Text));
     }
+    
+    private ReactiveCommand<Unit, Unit> _removeSelectedChatsCommand;
+    public ReactiveCommand<Unit, Unit> RemoveSelectedChatsCommand => _removeSelectedChatsCommand ??= ReactiveCommand.Create(RemoveSelectedChats);
 
-    public void DeleteChat(object parameter)
+    private void RemoveSelectedChats()
     {
-        if (parameter is not null)
+        var selectedItems = listBox.SelectedItems.Cast<Chat>().ToList();
+        foreach (var selectedItem in selectedItems)
         {
-            Source.Remove(parameter as Chat);
+            Chats.Remove(selectedItem);
         }
     }
 }

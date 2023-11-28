@@ -8,21 +8,22 @@
              x:DataType="vm:ChatViewModel">
     <Grid>
         <!-- Список элементов слева -->
-        <ListBox x:Name="itemListBox" Margin="10" ItemsSource="{Binding Source}">
+        <ListBox Name="listBox" Margin="10" ItemsSource="{Binding Source}" SelectionMode="Multiple">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal" Margin="5">
                         <!-- <CheckBox IsChecked="{Binding isChecked}" VerticalAlignment="Center"/> -->
                         <TextBlock Text="{Binding  ChatName}" VerticalAlignment="Center" Margin="5"/>
-                        <Button Content="Delete" Command="{Binding Path = (vm:ChatViewModel).DeleteChat}" CommandParameter="{Binding}" Margin="5"/>
+                        <!-- <Button Content="Delete" Command="{Binding}" CommandParameter="{Binding }" Margin="5"/> -->
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
         
         <StackPanel Margin="10" HorizontalAlignment="Right">
-            <TextBox x:Name="inputChatBox" Text="{Binding Text}" Margin="0,0,0,10"/>
+            <TextBox x:Name="InputChatBox" Text="{Binding Text}" Margin="0,0,0,10"/>
             <Button Content="Add" Command="{Binding AddNewChat }" CommandParameter="{Binding}"/>
+            <Button x:Name="RemoveButton" Content="Remove Selected" Command="{Binding RemoveSelectedChatsCommand}" />
         </StackPanel>
     </Grid>
 </UserControl>

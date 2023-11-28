@@ -4,7 +4,6 @@ namespace Tg_bot_GUI.Models;
 
 public class Chat
 {
-    public bool isChecked = true;
     public String ChatName { get; set; }
     public String chatId;
 
