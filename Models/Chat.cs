@@ -5,15 +5,15 @@ namespace Tg_bot_GUI.Models;
 public class Chat
 {
     public String ChatName { get; set; }
-    public String chatId;
+    private String ChatId;
     public Boolean isChecked { get; set; }
 
-    public Chat(String chatName)
+    public Chat(string chatName, string chatId)
     {
         ChatName = chatName;
+        ChatId = chatId;
     }
     
-    // Переопределение Equals и GetHashCode
     public override bool Equals(object obj)
     {
         if (obj == null || GetType() != obj.GetType())
@@ -22,11 +22,11 @@ public class Chat
         }
 
         Chat otherChat = (Chat)obj;
-        return ChatName == otherChat.ChatName;
+        return ChatId == otherChat.ChatId;
     }
 
     public override int GetHashCode()
     {
-        return ChatName.GetHashCode();
+        return ChatId.GetHashCode();
     }
 }

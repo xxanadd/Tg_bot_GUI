@@ -23,5 +23,11 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/stepa/RiderProjects/Tg_bot_GUI/Views/ChatView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/stepa/RiderProjects/Tg_bot_GUI/Views/LoginView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/stepa/RiderProjects/Tg_bot_GUI/Views/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/stepa/RiderProjects/Tg_bot_GUI/Views/MessageView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

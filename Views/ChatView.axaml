@@ -31,7 +31,7 @@
                                     <Button Grid.Column="2" CommandParameter="{Binding}" 
                                             Command="{Binding $parent[ListBox].((vm:ChatViewModel)DataContext).RemoveSelectedChats}"
                                             Background="Transparent" Padding="0" HorizontalAlignment="Right"
-                                            Margin="10">
+                                             Margin="10">
                                         <Image Source="../Assets/delete_cross.png" Height="20" Width="20"/>
                                     </Button>
                                 </Grid>
@@ -52,11 +52,11 @@
                     Width="180" Height = "60" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
                     Margin = "10" CornerRadius="20" FontFamily="{StaticResource Tech}" 
                     HorizontalAlignment="Center" FontSize="20"/>
-            <Button Content="Send message" Command="{Binding AddNewChat }" 
-                    CommandParameter="{Binding}" Background="#3498db" Foreground="White"
-                    Width="180" Height = "60" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+            <Button Content="Send message" Command="{Binding GoNext }" Background="#3498db" 
+                    Foreground="White" Width="180" Height = "60" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
                     Margin = "10" CornerRadius="20" FontFamily="{StaticResource Tech}" 
-                    HorizontalAlignment="Center" FontSize="20"/>
+                    HorizontalAlignment="Center" FontSize="20">
+            </Button>
         </StackPanel>
     </Grid>
 </UserControl>
