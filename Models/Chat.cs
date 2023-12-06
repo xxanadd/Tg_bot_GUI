@@ -4,11 +4,11 @@ namespace Tg_bot_GUI.Models;
 
 public class Chat
 {
-    public String ChatName { get; set; }
-    private String ChatId;
+    public string? ChatName { get; set; }
+    public string? ChatId { get; }
     public Boolean isChecked { get; set; }
 
-    public Chat(string chatName, string chatId)
+    public Chat(string? chatName, string? chatId)
     {
         ChatName = chatName;
         ChatId = chatId;

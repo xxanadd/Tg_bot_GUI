@@ -14,7 +14,7 @@
                     Margin = "20, 10" CornerRadius="20" FontFamily="{StaticResource Tech}" 
                     HorizontalAlignment="Left" FontSize="20"/>
             <!-- Список элементов слева -->
-            <ListBox DockPanel.Dock="Bottom" Margin="20, 0" ItemsSource="{Binding Source}" 
+            <ListBox DockPanel.Dock="Bottom" Margin="20, 0" ItemsSource="{Binding SourceDatabaseController.Source}" 
                      Background="Transparent" SelectionMode="Toggle">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
@@ -46,7 +46,7 @@
                        FontFamily="{StaticResource Tech}" FontSize="18" Margin = "10"/>
             <TextBox x:Name="InputChatBox" Text="{Binding Text}" Margin = "10" CornerRadius="20" Height="50" 
                      HorizontalAlignment="Stretch" FontFamily="{StaticResource Tech}" FontSize="18"
-                     VerticalContentAlignment="Center"/>
+                     VerticalContentAlignment="Center" Watermark="{Binding Watermark}"/>
             <Button Content="Add" Command="{Binding AddNewChat }" 
                     CommandParameter="{Binding}" Background="#000000" Foreground="White"
                     Width="180" Height = "60" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 

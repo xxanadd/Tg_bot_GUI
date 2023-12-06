@@ -12,7 +12,8 @@
             <Grid ColumnDefinitions="*,6*,*">
                     <TextBox Grid.Column="1" Name="InputTextBox" Margin = "25" CornerRadius="20" Height="50" 
                              HorizontalAlignment="Stretch" FontFamily="{StaticResource Tech}" FontSize="18"
-                             VerticalContentAlignment="Center" Text="{Binding Token}"/>
+                             VerticalContentAlignment="Center" Text="{Binding Token}"
+                             Watermark="{Binding Watermark}" />
             </Grid>
         <Button HorizontalAlignment="Center" Content="Submit" Background="#3498db" Foreground="White"
                 Padding="50, 20"  CornerRadius="20" FontFamily="{StaticResource Tech}"

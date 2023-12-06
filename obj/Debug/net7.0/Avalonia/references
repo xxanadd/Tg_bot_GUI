@@ -23,6 +23,8 @@ C:\Users\stepa\.nuget\packages\avalonia.themes.simple\11.0.5\lib\net6.0\Avalonia
 C:\Users\stepa\.nuget\packages\avalonia.win32\11.0.5\lib\net6.0\Avalonia.Win32.dll
 C:\Users\stepa\.nuget\packages\avalonia.x11\11.0.5\lib\net6.0\Avalonia.X11.dll
 C:\Users\stepa\.nuget\packages\dynamicdata\8.0.2\lib\net7.0\DynamicData.dll
+C:\Users\stepa\.nuget\packages\entityframework\6.4.4\lib\netstandard2.1\EntityFramework.dll
+C:\Users\stepa\.nuget\packages\entityframework\6.4.4\lib\netstandard2.1\EntityFramework.SqlServer.dll
 C:\Users\stepa\.nuget\packages\harfbuzzsharp\2.8.2.3\lib\net6.0\HarfBuzzSharp.dll
 C:\Users\stepa\.nuget\packages\microcom.runtime\0.11.0\lib\net5.0\MicroCom.Runtime.dll
 C:\Users\stepa\.nuget\packages\microsoft.codeanalysis.csharp\3.8.0\lib\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
@@ -43,6 +45,7 @@ C:\Users\stepa\.nuget\packages\skiasharp\2.88.6\lib\net6.0\SkiaSharp.dll
 C:\Users\stepa\.nuget\packages\splat\14.7.1\lib\net7.0\Splat.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.AppContext.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Buffers.dll
+C:\Users\stepa\.nuget\packages\system.codedom\4.7.0\ref\netstandard2.0\System.CodeDom.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Collections.Concurrent.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Collections.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Collections.Immutable.dll
@@ -54,12 +57,16 @@ C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.ComponentModel.EventBasedAsync.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.ComponentModel.Primitives.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.ComponentModel.TypeConverter.dll
+C:\Users\stepa\.nuget\packages\system.configuration.configurationmanager\4.7.0\ref\netstandard2.0\System.Configuration.ConfigurationManager.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Configuration.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Console.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Core.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Data.Common.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Data.DataSetExtensions.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Data.dll
+C:\Users\stepa\.nuget\packages\system.data.sqlclient\4.8.1\ref\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\stepa\.nuget\packages\stub.system.data.sqlite.core.netstandard\1.0.118\lib\netstandard2.1\System.Data.SQLite.dll
+C:\Users\stepa\.nuget\packages\system.data.sqlite.ef6\1.0.118\lib\netstandard2.1\System.Data.SQLite.EF6.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Diagnostics.Contracts.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Diagnostics.Debug.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Diagnostics.DiagnosticSource.dll
@@ -163,6 +170,7 @@ C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Security.Cryptography.Primitives.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Security.Cryptography.X509Certificates.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Security.dll
+C:\Users\stepa\.nuget\packages\system.security.permissions\4.7.0\ref\netcoreapp3.0\System.Security.Permissions.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Security.Principal.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Security.Principal.Windows.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Security.SecureString.dll
@@ -190,6 +198,7 @@ C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Web.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Web.HttpUtility.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Windows.dll
+C:\Users\stepa\.nuget\packages\system.windows.extensions\4.7.0\ref\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Xml.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Xml.Linq.dll
 C:\Users\stepa\.nuget\packages\microsoft.netcore.app.ref\7.0.9\ref\net7.0\System.Xml.ReaderWriter.dll

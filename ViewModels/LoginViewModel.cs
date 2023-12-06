@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Reactive;
+using System.Reactive.Linq;
+using Avalonia.Media.TextFormatting.Unicode;
 using ReactiveUI;
 using Tg_bot_GUI.Controllers;
 
@@ -14,14 +16,35 @@ public class LoginViewModel: ReactiveObject, IRoutableViewModel
         get => _token;
         set => this.RaiseAndSetIfChanged(ref _token, value);
     }
+
+    private string _watermark;
+    public string Watermark
+    {
+        get => _watermark;
+        set => this.RaiseAndSetIfChanged(ref _watermark, value);
+    }
     public IScreen HostScreen { get; }
     public ReactiveCommand<Unit, IRoutableViewModel> GoNext { get; }
 
     public LoginViewModel(RoutingState router, IScreen hostScreen)
     {
+        _watermark = "";
         HostScreen = hostScreen;
         GoNext = ReactiveCommand.CreateFromObservable(
-            () => router.Navigate.Execute(new ChatViewModel(HostScreen, router, new TelegramBotController(_token)))
-        );
+            () =>
+            {
+                try
+                {
+                    var telegramBotController = new TelegramBotController(_token);
+                    return router.Navigate.Execute(new ChatViewModel(HostScreen, router, telegramBotController));
+                }
+                catch (Exception e)
+                {
+                    Watermark = e.Message;
+                    Token = "";
+                    return Observable.Return<IRoutableViewModel>(this);
+                }
+            }
+            );
     }
 }

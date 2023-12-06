@@ -7,16 +7,33 @@ using Telegram.Bot;
 
 public class TelegramBotController
 {
-    private TelegramBotClient bot;
+    private TelegramBotClient _bot;
+
+    public long Id;
 
     public TelegramBotController(string botToken)
     {
-        if (botToken == null) throw new ArgumentNullException(nameof(botToken));
-        bot = new TelegramBotClient(botToken);;
+        if (string.IsNullOrEmpty(botToken)) throw new Exception("Empty bot token");
+        _bot = new TelegramBotClient(botToken);
+        try
+        {
+            Id = _bot.GetMeAsync().Result.Id;
+        }
+        catch
+        {
+            throw new Exception("Invalid bot token");
+        }
     }
 
-    public string? GetChatName(string chatId)
+    public string? GetChatName(string? chatId)
     {
-        return bot.GetChatAsync(chatId).Result.Title;
+        try
+        {
+            return _bot.GetChatAsync(chatId).Result.Title;
+        }
+        catch
+        {
+            throw new Exception("Invalid chat id");
+        }
     }
 }

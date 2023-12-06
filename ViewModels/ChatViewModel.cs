@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
 using System.Reactive;
-using System.Reactive.Linq;
-using System.Windows.Input;
-using Avalonia.Controls;
-using DynamicData.Binding;
 using ReactiveUI;
-using Telegram.Bot;
 using Tg_bot_GUI.Controllers;
-using Tg_bot_GUI.Models;
+using Chat = Tg_bot_GUI.Models.Chat;
 
 namespace Tg_bot_GUI.ViewModels;
 
@@ -24,28 +15,40 @@ public class ChatViewModel: ReactiveObject, IRoutableViewModel
     
     public ReactiveCommand<Unit, IRoutableViewModel> GoBack => _router.NavigateBack;
     
-    private string _chatId;
+    private string? _chatId;
 
-    public string Text
+    private long _botId;
+
+    public string? Text
     {
         get => _chatId;
         set => this.RaiseAndSetIfChanged(ref _chatId, value);
     }
-    public ObservableCollectionExtended<Chat> Source { get; }
+
+    private string _watermark;
+
+    public string Watermark
+    {
+        get => _watermark;
+        set => this.RaiseAndSetIfChanged(ref _watermark, value);
+    }
+    public DatabaseController SourceDatabaseController { get; }
 
     public ChatViewModel(IScreen hostScreen, RoutingState router, TelegramBotController bot)
     {
+        _botId = bot.Id;
         _bot = bot;
-        _chatId = string.Empty;
+        Text = string.Empty;
+        Watermark = string.Empty;
         HostScreen = hostScreen;
         _router = router;
 
-        Source = new ObservableCollectionExtended<Chat>();
+        SourceDatabaseController = new DatabaseController(bot.Id);
         
         GoNext = ReactiveCommand.CreateFromObservable(
             () =>
             {
-                var screen = new MessageViewModel(hostScreen, Source);
+                var screen = new MessageViewModel(hostScreen, SourceDatabaseController);
                 return _router.Navigate.Execute(screen);
             });
     }
@@ -54,18 +57,30 @@ public class ChatViewModel: ReactiveObject, IRoutableViewModel
     public IScreen HostScreen { get; }
 
     public void AddNewChat()
-    { 
-        if(_chatId == "") return;
-        var chatName = _bot.GetChatName(_chatId);
-        if (chatName == null) return;
-        Source.Add(new Chat(chatName, _chatId));
-        _chatId = "";
-        this.RaisePropertyChanged(nameof(Text));
+    {
+        if (string.IsNullOrEmpty(_chatId))
+        {
+            Watermark = "Empty chat id";
+            return;
+        }
+        try
+        {
+            var chatName = _bot.GetChatName(_chatId);
+            if (chatName == null) return;
+            SourceDatabaseController.Add(new Chat(chatName, _chatId), _botId);
+            Text = "";
+            Watermark = "";
+        }
+        catch (Exception e)
+        {
+            Text = "";
+            Watermark = e.Message;
+        }
     }
 
     public void RemoveSelectedChats(Chat parameter)
     {
-        Source.Remove(parameter);
+        SourceDatabaseController.Remove(parameter, _botId);
     }
     
 }
